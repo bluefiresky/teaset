@@ -78,7 +78,7 @@ export default class Popover extends Component {
     let fs = StyleSheet.flatten(style);
     let {backgroundColor, borderColor, borderRadius, borderWidth} = fs;
 
-    let arrowSize = 7; //Square side length
+    let arrowSize = this.props.arrowSize?this.props.arrowSize : 7; //Square side length
     let headerSize = Math.sqrt(arrowSize * arrowSize * 2) / 2 + borderWidth; //The half-length of the square diagonal: sqrt(7^2 + 7^2) / 2 = 4.95
     let headerPadding = headerSize - arrowSize / 2; //Let the center of square on the edge: 5 - (7 / 2) = 1.5
     let headerPaddingCorner = paddingCorner ? paddingCorner : Theme.popoverPaddingCorner;
